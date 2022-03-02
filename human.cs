@@ -15,21 +15,26 @@ namespace OOP_stuff
         int kaal;
         string staatuskaal;
         Emakeel emakeel;
+        Sugu sugu;
 
-        //polja
+        
         public Inimene() { } //konstruktor
 
-        public Inimene(string Eesnimi, int Vanus, Emakeel emakeel)
+        public Inimene(string Eesnimi, int Vanus, Emakeel emakeel, int Kaal)
         {
             eesnimi = Eesnimi;
             vanus = Vanus;
             this.emakeel = emakeel;
-            //kaal = Kaal;
+            kaal = Kaal;
             //staatus = staatus;
         }
         public Emakeel Emakeel
         {
             get { return emakeel; }
+        }
+        public Sugu Sugu
+        {
+            get { return sugu; }
         }
         public string Eesnimi
         {
@@ -64,13 +69,35 @@ namespace OOP_stuff
         }
         public string Staatus
         {
-            set { if(staatus==null)staatus = value; }
-            get { return staatus; }
+            get {
+                var staatus = "";
+                if (vanus < 7)
+                { staatus = "väike laps"; }
+                else if (vanus < 17)
+                { staatus = "kooli laps"; }
+                else if (vanus < 65)
+                { staatus = "tööline inimine"; }
+                else
+                { staatus = "senior"; }
+                return staatus;
+                
+            }
         }       
         public string Staatuskaal
         {
-            set { if (staatuskaal == null) staatuskaal = value; }
-            get { return staatuskaal; }
+            get
+            {
+                var staatuskaal = "";
+                if (kaal < 50)
+                { staatuskaal = "Keskmisest vähem"; }
+                else if (kaal < 70)
+                { staatuskaal = "normaalne"; }
+                else if (kaal < 100)
+                { staatuskaal = "Üle keskmise"; }
+                else
+                { staatuskaal = "ebanormaalne"; }
+                return staatuskaal;
+            }
         }
         public int Kaal
         {
@@ -97,7 +124,9 @@ namespace OOP_stuff
         public void Tervitame() //metod
         {
             Console.WriteLine("Tere!");
-            Console.WriteLine("Minu nimi on {0}. Olen {1} aastat vana. Minu staatus on {2}. Minu kaal on {3}. Minu kaal staatus on {4}", eesnimi, vanus, staatus,kaal,staatuskaal);
+            Console.WriteLine("Minu nimi on {0}. Olen {1} aastat vana. Minu staatus on {2}.", eesnimi, vanus, Staatus);
+            Console.WriteLine("Minu kaal on {0}. Minu kaal staatus on {1}", kaal, Staatuskaal);
+            Console.WriteLine("Minu ema keel on {0}",emakeel);
         }
     }
 }

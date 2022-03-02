@@ -10,8 +10,8 @@ namespace OOP_stuff
     {
         static void Main(string[] args)
         {
-            Inimene naine = new Inimene("Marina",Emakeel.saksa);
-            naine.Tervitame();
+            Inimene naine1 = new Inimene("Marina",21,Emakeel.saksa,60);
+            naine1.Tervitame();
 
             Inimene[] inimesed = new Inimene[3];
             for (int i = 0; i < 3; i++)
@@ -32,8 +32,8 @@ namespace OOP_stuff
             Console.WriteLine("Ma olen {0}. Kui vana ma olen?", mees.Eesnimi);
             mees.Vanus = int.Parse(Console.ReadLine());
             mees.Tervitame();
-            Inimene naine = new Inimene("Alenka", 18);
-            naine.Tervitame();
+            Inimene naine2 = new Inimene("Alenka", 18, Emakeel.vene,55);
+            naine2.Tervitame();
 
             Console.ReadLine();
         }
