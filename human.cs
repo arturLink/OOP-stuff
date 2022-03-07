@@ -10,6 +10,7 @@ namespace OOP_stuff
     {
         //svoistva
         string eesnimi;
+        string perenimi;
         int vanus;
         string staatus;
         int kaal;
@@ -20,12 +21,13 @@ namespace OOP_stuff
         
         public Inimene() { } //konstruktor
 
-        public Inimene(string Eesnimi, int Vanus, Emakeel emakeel, int Kaal)
+        public Inimene(string Eesnimi, string Perenimi) // int Vanus, Emakeel emakeel, int Kaal)
         {
             eesnimi = Eesnimi;
+            perenimi = Perenimi;
             vanus = Vanus;
-            this.emakeel = emakeel;
-            kaal = Kaal;
+            //this.emakeel = emakeel;
+            //kaal = Kaal;
             //staatus = staatus;
         }
         public Emakeel Emakeel
@@ -43,6 +45,14 @@ namespace OOP_stuff
                 if (eesnimi == null) eesnimi = value;
             }
             get { return eesnimi; }
+        }
+        public string Perenimi
+        {
+            set
+            {
+                if (Perenimi == null) Perenimi = value;
+            }
+            get { return Perenimi; }
         }
         public int Vanus
         {
