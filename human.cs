@@ -25,7 +25,7 @@ namespace OOP_stuff
         {
             eesnimi = Eesnimi;
             perenimi = Perenimi;
-            vanus = Vanus;
+            //vanus = Vanus;
             //this.emakeel = emakeel;
             //kaal = Kaal;
             //staatus = staatus;
@@ -50,9 +50,9 @@ namespace OOP_stuff
         {
             set
             {
-                if (Perenimi == null) Perenimi = value;
+                if (perenimi == null) perenimi = value;
             }
-            get { return Perenimi; }
+            get { return perenimi; }
         }
         public int Vanus
         {

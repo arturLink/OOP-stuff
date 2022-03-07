@@ -25,6 +25,7 @@ namespace OOP_stuff
                 ruhm = value;
             }
         }
+
         public double Hinne
         {
             set { 
@@ -50,7 +51,6 @@ namespace OOP_stuff
         {
             string t = "";
             Console.WriteLine("Opilane: {0} {1}",Eesnimi,Perenimi);
-            Console.WriteLine("Hinne: {0}", hinne);
             if (Toetus == true)
             {
                 t = "Saan toetust kätte";
@@ -62,4 +62,5 @@ namespace OOP_stuff
             Console.WriteLine("Minu keskmine hinne on {0}. {1}", hinne, t);
         }
     }
+    
 }
