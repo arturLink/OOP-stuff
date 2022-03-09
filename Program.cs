@@ -10,37 +10,45 @@ namespace OOP_stuff
     {
         static void Main(string[] args)
         {
-            Opilane pois = new Opilane("Bunda", "Bundovich", "BUNDpv21");
-            pois.OpInfo();
+            Inimene[] inim = new Inimene[4];
+            inim[0] = new Opetaja("Tatjana","Nikolaevna","Ajalugu");
+            inim[0].kes_ma_olen();
+            inim[1] = new Opilane("Maksim","Vedernikov","9b");
+            inim[1].kes_ma_olen();
 
 
 
-            Inimene naine1 = new Inimene("Marina","Bunda");
-            naine1.Tervitame();
+            //Opilane pois = new Opilane("Bunda", "Bundovich", "BUNDpv21");
+            //pois.OpInfo();
 
-            Inimene[] inimesed = new Inimene[3];
-            for (int i = 0; i < 3; i++)
+
+
+            //Inimene naine1 = new Inimene("Marina","Bunda");
+            //naine1.Tervitame();
+
+            //Inimene[] inimesed = new Inimene[3];
+            //for (int i = 0; i < 3; i++)
             {
-                inimesed[i] = new Inimene();
-                Console.WriteLine("Nimi: ");
-                inimesed[i].Eesnimi = Console.ReadLine();
-                Console.WriteLine("Vanus: ");
-                inimesed[i].Vanus = int.Parse(Console.ReadLine());
+                //inimesed[i] = new Inimene();
+                //Console.WriteLine("Nimi: ");
+                //inimesed[i].Eesnimi = Console.ReadLine();
+                //Console.WriteLine("Vanus: ");
+                //inimesed[i].Vanus = int.Parse(Console.ReadLine());
             }
-            foreach (Inimene inimene in inimesed)
+            //foreach (Inimene inimene in inimesed)
             {
-                inimene.Tervitame();
+                //inimene.Tervitame();
             }
 
-            Inimene mees = new Inimene();
-            mees.Eesnimi = "Mark";
-            Console.WriteLine("Ma olen {0}. Kui vana ma olen?", mees.Eesnimi);
-            mees.Vanus = int.Parse(Console.ReadLine());
-            mees.Tervitame();
-            Inimene naine2 = new Inimene("Alenka", "UltraBunda");
-            naine2.Tervitame();
+            //Inimene mees = new Inimene();
+            //mees.Eesnimi = "Mark";
+            //Console.WriteLine("Ma olen {0}. Kui vana ma olen?", mees.Eesnimi);
+            //mees.Vanus = int.Parse(Console.ReadLine());
+            //mees.Tervitame();
+            //Inimene naine2 = new Inimene("Alenka", "UltraBunda");
+            //naine2.Tervitame();
 
-            Console.ReadLine();
+            //Console.ReadLine();
         }
     }
 }

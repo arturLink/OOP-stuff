@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_stuff
 {
-    public class Inimene
+    public abstract class Inimene
     {
         //svoistva
         string eesnimi;
@@ -138,5 +138,6 @@ namespace OOP_stuff
             Console.WriteLine("Minu kaal on {0}. Minu kaal staatus on {1}", kaal, Staatuskaal);
             Console.WriteLine("Minu ema keel on {0}",emakeel);
         }
+        public abstract void kes_ma_olen();
     }
 }

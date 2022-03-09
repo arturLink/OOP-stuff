@@ -61,6 +61,10 @@ namespace OOP_stuff
             }
             Console.WriteLine("Minu keskmine hinne on {0}. {1}", hinne, t);
         }
+        public override void kes_ma_olen()
+        {
+            Console.WriteLine("Ma olen õpilane {0} {1} ja ma õpin {2}",Eesnimi,Perenimi,ruhm);
+        }
     }
     
 }
